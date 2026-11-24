@@ -1,0 +1,14 @@
+- insert:
+    - id: draw-things-chat
+      name: '@local/draw-things-chat'
+      config:
+        baseUrl: http://127.0.0.1:7860
+        model: ''
+        size: square
+        steps: 20
+        sampler: DPM++ 2M Karras
+        cfgScale: 6.5
+        seedMode: Scale Alike
+        negativePrompt: ''
+        models:
+          - sd_xl_base_1.0_f16.ckpt

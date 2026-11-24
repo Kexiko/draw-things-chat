@@ -1,0 +1,41 @@
+{
+  "name": "@local/draw-things-chat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chat panel that generates images with the local Draw Things app through its HTTP API.",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "src",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-modules"
+      ]
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@deepseek-ai/schemastery": "~3.19.0"
+  }
+}
